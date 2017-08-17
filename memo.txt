@@ -1,0 +1,17 @@
+
+Dose
+  has a description (FAILED - 7)
+  description cannot be blank (FAILED - 8)
+  belongs to a cocktail (FAILED - 9)
+  belongs to an ingredient (FAILED - 10)
+  cocktail cannot be blank (FAILED - 11)
+  ingredient cannot be blank (FAILED - 12)
+  is unique for a given cocktail/ingredient couple (FAILED - 13)
+
+Ingredient
+  has a name (FAILED - 14)
+  name cannot be blank (FAILED - 15)
+  name is unique (FAILED - 16)
+  has many doses (FAILED - 17)
+  should not be able to destroy self if has dose children (FAILED - 18)
+
