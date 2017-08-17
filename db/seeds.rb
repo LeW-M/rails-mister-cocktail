@@ -20,9 +20,11 @@ Cocktail.create(name: "Whiskey Sour")
 Cocktail.create(name: "Mojito")
 p "Cocktail populated"
 
+p "Populating cocktail attributes"
 Cocktail.all.each do |cocktail|
-  description = %w(1 2 4)
+  description = %w(20ml 40ml 50ml)
   5.times do
     Dose.create(description: description.sample, ingredient: Ingredient.all.sample, cocktail: cocktail)
   end
 end
+p "Finished populating cocktail attributes"

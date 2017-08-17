@@ -1,2 +1,24 @@
 <h1>Cocktails#show</h1>
 <p>Find me in app/views/cocktails/show.html.erb</p>
+
+<p>
+  <%= @cocktail.name %>
+</p>
+
+<p>
+  <% @cocktail.doses.each do |dose| %>
+    <%= dose.description %>  x <%= dose.ingredient.name %>
+    <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete  do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
+  <% end %>
+</p>
+
+<p>
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "add dose", class: "btn btn-primary"%>
+  <% end %>
+</p>
+

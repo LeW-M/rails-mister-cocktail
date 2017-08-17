@@ -1,0 +1,8 @@
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name  %>
+  <%# f.association :ingredient %>
+  <%# f.input :ingredient_id, as: :select, collection: Ingredient.all %>
+  <%= f.submit %>
+<% end %>
+
+
