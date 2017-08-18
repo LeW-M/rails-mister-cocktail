@@ -20,9 +20,32 @@
 
 document.addEventListener('DOMContentLoaded', (e) => {
     $('#car-test').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      centerMode: true,
+      centerPadding: '60px',
       slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
     })
 });
 
