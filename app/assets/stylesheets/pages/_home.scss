@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+.overview {
+  height: 500px;
+  background: #E2E2E2;
+  color: rgb(51,51,51);
+  padding: 10px;
+  margin: 0;
+  h2 {
+    text-align: center;
+    opacity: 0.8;
+  }
+  .row {
+    opacity: 0.6;
+  }
+}

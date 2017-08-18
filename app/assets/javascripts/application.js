@@ -14,6 +14,15 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require slick
 //= require bootstrap-sprockets
 //= require_tree .
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    $('#car-test').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true
+    })
+});
 
